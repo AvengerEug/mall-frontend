@@ -2,8 +2,8 @@
   <van-tabbar v-model="active">
     <van-tabbar-item icon="home-o">首页</van-tabbar-item>
     <van-tabbar-item icon="bag-o" dot>分类</van-tabbar-item>
-    <van-tabbar-item icon="shopping-cart-o" badge="5">购物车</van-tabbar-item>
-    <van-tabbar-item icon="manager-o" badge="20" @click="myWork()">我的</van-tabbar-item>
+    <van-tabbar-item icon="shopping-cart-o" badge="5" @click="toCar()">购物车</van-tabbar-item>
+    <van-tabbar-item icon="manager-o" badge="20" @click="toMine()">我的</van-tabbar-item>
   </van-tabbar>
 </template>
 
@@ -17,12 +17,15 @@ export default {
   },
   data() {
     return {
-      active: 0,
+      active: 0
     }
   },
   methods: {
-    myWork() {
-      console.log('my work')
+    toMine() {
+      this.$router.push({name: 'mine'})
+    },
+    toCar() {
+      this.$router.push({name: 'cart'})
     }
   }
 }

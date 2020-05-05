@@ -45,8 +45,8 @@ import {
   SwipeItem,
   Lazyload, TabbarItem, Col, Row, Toast, PullRefresh,
   Grid, GridItem, List, Image as VanImage } from 'vant'
-import FlootBar from '_C/FlootBar'
-import SearchBar from '_C/SearchBar'
+import FlootBar from 'components/FlootBar'
+import SearchBar from 'components/SearchBar'
 
 Vue.use(Toast)
 Vue.use(Lazyload)
@@ -111,6 +111,10 @@ export default {
 .home-wrapper {
   .test {
     width: 8rem;
+  }
+
+  /deep/ .van-image__img {
+    margin: 0 0.2rem;
   }
 }
 </style>

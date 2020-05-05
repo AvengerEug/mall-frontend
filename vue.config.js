@@ -18,7 +18,7 @@ module.exports = {
     .set("views", resolve("src/views"))
     .set("_css", resolve("src/assets/css"))
     .set("image", resolve("src/assets/images"))
-    .set("_C", resolve("src/components"))
+    .set("components", resolve("src/components"))
     .set("utils", resolve("src/utils"))
   },
   // 是否在保存的时候使用 `eslint-loader` 进行检查。
