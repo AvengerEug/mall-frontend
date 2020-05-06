@@ -53,7 +53,7 @@ module.exports = {
     https: false, // https:{type:Boolean}
     hotOnly: false,
 	  disableHostCheck: true,
-    open: true, //配置自动启动浏览器  open: 'Google Chrome'-默认启动谷歌
+    open: false, //配置自动启动浏览器  open: 'Google Chrome'-默认启动谷歌
   },
   // 三方插件的选项
   // pluginOptions: {}

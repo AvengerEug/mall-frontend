@@ -1,7 +1,5 @@
 <template>
   <div>
-    <nav-bar title="购物车" />
-    
     <van-swipe-cell>
       <van-card
         num="2"
@@ -43,11 +41,9 @@
 
 <script>
 import { Card, Button as VanButton, SubmitBar, Checkbox, SwipeCell, Toast  } from 'vant'
-import NavBar from 'components/NavBar'
 
 export default {
   components: {
-    NavBar,
     [Card.name]: Card,
     [VanButton.name]: VanButton,
     [SubmitBar.name]: SubmitBar,

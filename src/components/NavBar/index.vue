@@ -23,7 +23,7 @@ export default {
       type: String,
       default: () => { return '返回' }
     },
-    customizeClickLeft: {
+    leftAction: {
       type: Boolean,
       default: () => { return false }
     }
@@ -31,12 +31,11 @@ export default {
 
   methods: {
     onClickLeft() {
-      if (this.customizeClickLeft) {
+      if (this.leftAction) {
         this.$emit('clickLeft')
       } else {
         history.back(-1)
       }
-      
     },
     onClickRight() {
       Toast('按钮')

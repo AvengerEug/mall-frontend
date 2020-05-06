@@ -1,7 +1,5 @@
 <template>
   <div>
-    <nav-bar title="我的工作台" leftText="首页" :customizeClickLeft="true" @clickLeft="jumpToHome()"/>
-
     <van-cell title="头像" center>
       <van-image
         round
@@ -29,7 +27,6 @@ import {
   Image as VanImage
   } from 'vant'
 
-import NavBar from 'components/NavBar'
 import Session from '@/plugins/session'
 
 export default {
@@ -37,7 +34,6 @@ export default {
     [VanButton.name]: VanButton,
     [Cell.name]: Cell,
     [VanImage.name]: VanImage,
-    NavBar
   },
   data() {
     return {
@@ -47,9 +43,6 @@ export default {
     logout() {
       Session.remove()
       this.$router.push({name: 'login'})
-    },
-    jumpToHome() {
-      this.$router.push({name: 'index'})
     }
   }
 }

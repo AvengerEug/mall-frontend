@@ -1,6 +1,6 @@
 <template>
   <van-tabbar v-model="active">
-    <van-tabbar-item icon="home-o">首页</van-tabbar-item>
+    <van-tabbar-item icon="home-o" @click="toHome()">首页</van-tabbar-item>
     <van-tabbar-item icon="bag-o" dot>分类</van-tabbar-item>
     <van-tabbar-item icon="shopping-cart-o" badge="5" @click="toCar()">购物车</van-tabbar-item>
     <van-tabbar-item icon="manager-o" badge="20" @click="toMine()">我的</van-tabbar-item>
@@ -21,6 +21,9 @@ export default {
     }
   },
   methods: {
+    toHome() {
+      this.$router.push({name: 'home'})
+    },
     toMine() {
       this.$router.push({name: 'mine'})
     },
